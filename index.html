@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ancora — Opening Soon · Now Hiring</title>
+  <meta
+    name="description"
+    content="Ancora, a new Italian restaurant coming to Santa Barbara from the team behind Nella Kitchen & Bar and S.Y. Kitchen. Opening soon and now hiring."
+  />
+
+  <!-- Fonts: Fraunces (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      /* Ancora brand tokens */
+      --color-surface: #fdfdfc;
+      --color-surface-raised: #f3f5f6;
+      --color-ink: #2a3138;
+      --color-ink-soft: #4a555f;
+      --color-ink-muted: #788690;
+      --color-accent: #5e7382;
+      --color-accent-strong: #4a5a66;
+      --color-rule: #cfd6da;
+      --color-rule-soft: #e6eaec;
+
+      --font-display: "Fraunces", "Cormorant Garamond", Georgia, serif;
+      --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+
+      --container: 720px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--color-surface);
+      color: var(--color-ink);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: clamp(48px, 9vw, 104px) clamp(24px, 6vw, 40px) 0;
+      padding-top: 2rem;
+    }
+
+    /* ---- Brand lockup ---- */
+    .brand {
+      text-align: center;
+      margin-bottom: clamp(40px, 7vw, 64px);
+    }
+    .brand__mark {
+      width: clamp(200px, 34vw, 300px);
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* ---- Hero ---- */
+    .eyebrow {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin: 0 0 clamp(16px, 3vw, 20px);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(68px, 14.4vw, 104px);
+      line-height: 1.06;
+      letter-spacing: -0.015em;
+      text-align: center;
+      margin: 0 0 clamp(24px, 5vw, 32px);
+      color: var(--color-ink);
+    }
+
+    .lede {
+      font-size: clamp(18px, 2.4vw, 20px);
+      line-height: 1.6;
+      color: var(--color-ink-soft);
+      text-align: center;
+      max-width: 56ch;
+      margin: 0 auto clamp(40px, 7vw, 56px);
+    }
+
+    /* ---- Roles ---- */
+    .roles {
+      border-top: 1px solid var(--color-rule-soft);
+      padding: clamp(32px, 6vw, 44px) 0;
+      margin-bottom: clamp(32px, 6vw, 44px);
+    }
+    .roles__title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(22px, 4vw, 26px);
+      text-align: center;
+      margin: 0 0 clamp(24px, 5vw, 32px);
+      color: var(--color-ink);
+    }
+    .roles__list {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 560px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px clamp(24px, 6vw, 48px);
+    }
+    @media (max-width: 480px) {
+      .roles__list {
+        grid-template-columns: 1fr;
+      }
+    }
+    .roles__list li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--color-rule-soft);
+      font-size: 16px;
+      color: var(--color-ink-soft);
+    }
+    .roles__list li::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      transform: translateY(-3px);
+    }
+
+    /* ---- Apply ---- */
+    .apply {
+      text-align: center;
+      max-width: 52ch;
+      margin: 0 auto clamp(56px, 10vw, 88px);
+      color: var(--color-ink-soft);
+    }
+    .apply a {
+      color: var(--color-accent);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      white-space: nowrap;
+    }
+    .apply a:hover {
+      color: var(--color-ink);
+    }
+
+    /* ---- Family / partnership footer block ---- */
+    .family {
+      border-top: 1px solid var(--color-rule-soft);
+      background: var(--color-surface-raised);
+      margin: 0 calc(50% - 50vw); /* full-bleed band */
+      padding: clamp(48px, 8vw, 72px) clamp(24px, 6vw, 40px);
+      text-align: center;
+    }
+    .family__inner {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .family__label {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      color: var(--color-ink-muted);
+      margin: 0 0 clamp(16px, 3vw, 20px);
+    }
+    .family__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(28px, 6vw, 56px);
+    }
+    .family__logos img {
+      height: 26px;
+      width: auto;
+      opacity: 0.78;
+      transition: opacity 160ms ease;
+    }
+    .family__logos a:hover img {
+      opacity: 1;
+    }
+    .family__divider {
+      width: 48px;
+      height: 1px;
+      background: var(--color-rule);
+      border: 0;
+      margin: clamp(36px, 6vw, 48px) auto clamp(16px, 3vw, 20px);
+    }
+    .family__partner img {
+      height: 44px;
+    }
+
+    .colophon {
+      margin-top: clamp(32px, 6vw, 44px);
+      font-size: 13px;
+      color: var(--color-ink-muted);
+    }
+    .colophon a {
+      color: var(--color-ink-muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-rule);
+    }
+    .colophon a:hover {
+      color: var(--color-ink);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <!-- BRAND -->
+    <header class="brand">
+      <img class="brand__mark" src="img/ancora-logo-mark.svg" alt="Ancora" />
+    </header>
+
+    <!-- HERO -->
+    <h1>Opening Soon! <br>Now Hiring!</h1>
+    <p class="lede">
+      Ancora is a new Italian restaurant arriving in Santa Barbara from the team
+      behind Nella Kitchen &amp; Bar and S.Y. Kitchen. Expect handmade pasta,
+      a market-driven menu that changes with the season, and a thoughtfully
+      chosen Italian wine list — all in a warm, unhurried room built for lingering.
+      We&rsquo;re putting the finishing touches in place and building the team
+      that will bring it to life.
+    </p>
+
+    <!-- OPEN ROLES -->
+    <section class="roles" aria-labelledby="roles-title">
+      <h2 class="roles__title" id="roles-title">Open Roles</h2>
+      <ul class="roles__list">
+        <li>General Manager</li>
+        <li>Sous Chef</li>
+        <li>Line Cook</li>
+        <li>Prep Cook</li>
+        <li>Pastry Cook</li>
+        <li>Dishwasher</li>
+        <li>Server</li>
+        <li>Bartender</li>
+        <li>Host</li>
+        <li>Busser</li>
+        <li>Food Runner</li>
+        <li>Sommelier</li>
+      </ul>
+    </section>
+
+    <!-- APPLY -->
+    <p class="apply">
+      To apply, send your resume to
+      <a href="mailto:office@nellakitchen.com?subject=Ancora%20%E2%80%94%20Application">office@nellakitchen.com</a>
+      and indicate the role you&rsquo;re applying for.
+    </p>
+  </main>
+
+  <!-- FAMILY / PARTNERSHIP -->
+  <footer class="family">
+    <div class="family__inner">
+      <p class="family__label">Part of the</p>
+      <div class="family__logos">
+        <a href="https://www.toscanarestaurantgroup.com" aria-label="Toscana Restaurant Group">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5e597f52bad641180fad1c46/9c4458fd-5140-4a4c-94f8-3ad022315020/TRG_Wordmark_Solid_Charcoal.png?format=1000w"
+            alt="Toscana Restaurant Group"
+          />
+        </a>
+      </div>
+
+      <p class="colophon">
+        &copy; <span id="year">2026</span> Ancora · Santa Barbara, California
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
